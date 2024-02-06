@@ -16,8 +16,7 @@ function App() {
     if (response.status == 200) {
       //get json
       const data = await response.json();
-      console.log("adding url", data);
-      setGif(data);
+      setGif(data.data.images.original);
     } else {
       throw `error with status ${response.status}`;
     }
@@ -25,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SearchButton gifSerach={getGiphy} />
+      <SearchButton gifSearch={getGiphy} />
       <Gif gifImage={gif} />
     </div>
   );

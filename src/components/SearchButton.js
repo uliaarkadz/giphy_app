@@ -1,6 +1,6 @@
 function SearchButton(props) {
   const handleSubmit = () => {
-    props.gifSerach();
+    props.gifSearch();
   };
   return (
     <div className="search">
